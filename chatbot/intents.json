@@ -1,0 +1,221 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "hii",
+        "hi",
+        "Hii",
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting, will help you with my fullest",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "pincode",
+      "patterns": [
+      "Pincode of college",
+      "what's the pin ?",
+      "what's the postal code of f.c. ?",
+      "what is the pin code of the college ?",
+      "what is the Postal Code of the College ?"
+    ],
+      "responses": [
+      "Postal Code of the College is 411004",
+      "Pin Code of the college is 411004",
+      "411004"
+    ]
+    },
+    {
+      "tag": "address",
+      "patterns": [
+        "Where is college?",
+        "What is the address?",
+        "Where is fergusson college?",
+        "Where is college's location?",
+        "What is the location of the college?",
+        "location of college?"
+      ],
+      "responses": [
+        "Fergusson College is in Shivaji Nagar, Pune"
+      ]
+    },
+    {
+      "tag": "fees",
+      "patterns": [
+        "Where can we pay fees?",
+        "Do we need to pay online?",
+        "What are payment methods available?",
+        "Are you cash only?"
+      ],
+      "responses": [
+        "We accept VISA, Mastercard,Rupay and UPI ",
+        "We accept most major credit cards,debit cards and UPI"
+      ]
+    },
+    {
+      "tag": "principal",
+      "patterns": [
+        "Who is the principal of the college?",
+        "What is name of the princpal?",
+        "Principal's name"
+      ],
+      "responses": [
+        "The Principal of our college is Dr. Ravindrasinh G. Pardeshi"
+      ]
+    },
+	{
+      "tag": "mission",
+      "patterns": [
+        "what is fc's mission",
+        "What is the college's mission",
+        "mission of college"
+      ],
+      "responses": [
+        "Strive for excellence in education in keeping with the motto of the college, 'Knowledge is Power' and prepare young minds for imbibing knowledge, skills and sensitivity."
+      ]
+    },
+{
+      "tag": "foundation",
+      "patterns": [
+        "foundation day of college",
+	"foundation day of fc",
+	"when f.c. was founded?",
+        "What is the foundation day of college"
+      ],
+      "responses": [
+        "In January 1885, Fergusson College was founded."
+      ]
+    },
+	
+    {
+      "tag": "motto",
+      "patterns": [
+        "What's the motto of college",
+        "motto of college",
+	"motto"
+      ],
+      "responses": [
+        "Knowledge is Power"
+      ]
+    },
+    {
+      "tag": "founders",
+      "patterns": [
+        "Who founded the f.c.?",
+        "Who founded the fergusson college?",
+        "Who founded the college?",
+        "What are the names of the founders?",
+        "Who were the founders",
+        "Name the founders"
+      ],
+      "responses": [
+        "Fergusson College was founded by Vaman Shriram Apte, Bal Gangadhar Tilak, Vishnushashtri Chiplunkar, Mahadeo Ballal Namjoshi and Gopal Krishna Agarkar"
+      ]
+    },
+    {
+      "tag": "principal_office",
+      "patterns": [
+        "Where is principal's office?",
+        "Where is principal's office location?",
+        "What is the location of principal's office?",
+        "location of principal office?"
+      ],
+      "responses": [
+        "Principal's Office is in the Main Building"
+      ]
+    },
+    {
+      "tag": "admission",
+      "patterns": [
+        "When does the admission start?",
+        "How long is the admission procedure?"
+      ],
+      "responses": [
+        "Admission starts in June - July Every Year",
+        "It takes about 2 to 3 months"
+      ]
+    },
+    {
+      "tag": "office",
+      "patterns": [
+        "Where is Admission Office?",
+        "What's the location of Admission Office?",
+        "Where is Office No. 3?",
+        "What's the location of Office No. 3?"
+      ],
+      "responses": [
+        "Admission Office and Office No. 3, both are in Main Building"
+      ]
+    },
+{
+      "tag": "invalid",
+      "patterns": [
+        "How much is the fees of MIT WPU",
+        "Where is MIT WPU",
+        "How many students are there in MIT",
+	"What is the intake capacity of MIT",
+	"how to get bus for Manapa?",
+	"where is Airport"
+      ],
+      "responses": [
+        "These details are not in the Jurisdiction of Fergusson College"
+      ]
+    },
+	{
+      "tag": "null_details",
+      "patterns": [
+        "How many departments are there in FC",
+        "how many books are there in Wadia Library",
+        "how to apply for SC/ST freeship",
+	"how to get bonafide certificate",
+	"when fest will be organised?",
+	"who is the HOD of Biotechnology",
+	"Who is Head of Department of Biotechnology"
+      ],
+      "responses": [
+        "These details are not available with us, Kindly Visit the Concerned Department"
+      ]
+    },
+    
+    {
+      "tag": "funny",
+      "patterns": [
+        "Tell me a joke!",
+        "Tell me something funny!",
+        "Do you know a joke?"
+      ],
+      "responses": [
+        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
+        "What did the buffalo say when his son left for college? Bison."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    }
+  ]
+}
