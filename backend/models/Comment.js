@@ -18,7 +18,9 @@ const Comment = sequelize.define('comment', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
     allowNull: false,
-  },
+  }
+},{ 
+  timestamps: false,
 });
 
 Comment.belongsTo(User, { foreignKey: 'userid', onDelete: 'CASCADE', onUpdate: 'CASCADE' });

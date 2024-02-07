@@ -20,7 +20,9 @@ const Notice = sequelize.define('notice', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
     allowNull: false,
-  },
+  }
+},{
+  timestamps: false,
 });
 
 Notice.belongsTo(Department, { foreignKey: 'departmentid', onDelete: 'CASCADE', onUpdate: 'CASCADE' });

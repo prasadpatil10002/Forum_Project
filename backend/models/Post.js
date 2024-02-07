@@ -2,12 +2,13 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
 const User = require('./User');
-const Department = require('./Department');
+// const Department = require('./Department');
 
 const Post = sequelize.define('post', {
   postid: {
     type: DataTypes.INTEGER,
     primaryKey: true,
+    autoIncrement: true,
   },
   content: {
     type: DataTypes.TEXT,
@@ -18,9 +19,11 @@ const Post = sequelize.define('post', {
     defaultValue: DataTypes.NOW,
     allowNull: false,
   },
+},{
+  timestamps: false,
 });
 
 Post.belongsTo(User, { foreignKey: 'userid', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
-Post.belongsTo(Department, { foreignKey: 'departmentid', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
+// Post.belongsTo(Department, { foreignKey: 'departmentid', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
 
 module.exports = Post;
