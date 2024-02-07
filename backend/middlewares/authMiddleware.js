@@ -23,7 +23,7 @@ const authenticateToken = async (req, res, next) => {
     }
 };
 
-const authorizeFaculty = (req, res, next) => {
+const authenticateFaculty = (req, res, next) => {
     // Check if the user is authenticated
     if (!req.user) {
       return res.status(401).json({ message: 'Unauthorized: Missing authentication token' });
@@ -39,4 +39,4 @@ const authorizeFaculty = (req, res, next) => {
 };
 
 
-module.exports = {authenticateToken,authorizeFaculty};
+module.exports = {authenticateToken,authenticateFaculty};
