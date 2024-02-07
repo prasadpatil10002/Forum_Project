@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
 const noticeRoutes = require('./routes/noticeRoutes');
+const commentRoutes = require('./routes/commentRoutes');
 
 const app = express();
 
