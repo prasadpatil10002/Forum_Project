@@ -30,7 +30,7 @@ const authenticateFaculty = (req, res, next) => {
     }
   
     // Check if the user has the faculty userType
-    if (req.user.userType !== 'faculty') {
+    if (req.user.usertype !== 'faculty') {
       return res.status(403).json({ message: 'Forbidden: Only faculty members are allowed' });
     }
   

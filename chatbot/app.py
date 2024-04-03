@@ -1,18 +1,26 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, request, jsonify
 from chat import get_response
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 
+# Function to handle queries with "I do not understand" response
+def handle_unknown_query(query):
+    with open("unknown_queries.txt", "a") as file:
+        file.write(query + "\n")
 
-# @app.get("/")
-# def index_get():
-#     return render_template("base.html")
-
+# Route to predict responses
 @app.post("/predict")
 def predict():
     text = request.get_json().get("message")
-    # TODO: check if text is valid
+    # Get response from chat module
     response = get_response(text)
+
+    # Check if response is "I do not understand"
+    if response == "I do not understand...":
+        handle_unknown_query(text)
+
     message = {"answer": response}
     return jsonify(message)
 

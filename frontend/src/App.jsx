@@ -4,7 +4,13 @@ import { BrowserRouter ,Routes, Route, } from 'react-router-dom';
 import SignupPage from './pages/SignupPage';
 import LoginPage from './pages/LoginPage';
 import Dashboard from './pages/Dashboard';
-import NavbarComponent from './components/NavbarComponent';
+import MyPosts from './pages/MyPosts';
+import Notices from './pages/Notices';
+import MyNotices from './pages/MyNotices';
+import FAQPage from './pages/FAQPage';
+import Settings from './pages/Settings';
+
+
 
 function App() {
   return (
@@ -15,7 +21,12 @@ function App() {
         <Route path="/" Component={LoginPage} />
         <Route path="/signup" Component={SignupPage} />
         <Route path="/login" Component={LoginPage} />
-        <Route path="/dashboard" Component={NavbarComponent}/>
+        <Route path="/dashboard" Component={Dashboard}/>
+        <Route path="/myposts" Component={MyPosts}/>
+        <Route path="/allnotices" Component={Notices}/>
+        <Route path="/mynotices" Component={MyNotices}/>
+        <Route path="/faq" Component={FAQPage}/>
+        <Route path="/settings" Component={Settings} />
     </Routes>
     </BrowserRouter>
     //<SignupPage></SignupPage>

@@ -5,10 +5,10 @@ const {authenticateToken} = require('../middlewares/authMiddleware');
 
 router.post('/', authenticateToken, createComment);
 
-router.get('/post/:postId', getCommentsByPostId);
+router.get('/post/:postid', getCommentsByPostId);
 
-router.put('/:commentId', authenticateToken, updateComment);
+router.put('/:commentid', authenticateToken, updateComment);
 
-router.delete('/:commentId', authenticateToken, deleteComment);
+router.delete('/:commentid', authenticateToken, deleteComment);
 
 module.exports = router;

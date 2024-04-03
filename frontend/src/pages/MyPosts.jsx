@@ -1,9 +1,9 @@
 import NavbarComponent from "../components/NavbarComponent";
 import SidebarComponent from "../components/SidebarComponent";
-import PostContainer from "../components/PostContainer";
+import MyPostsContainer from "../components/MyPostsContainer";
 import ChatbotComponent from "../components/ChatbotComponent";
 
-const Dashboard = () => {
+const MyPosts = () => {
   return (
     <div className="font-poppins">
       <div className="">
@@ -16,7 +16,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="mt-4 mr-24 postsContainer w-3/5 flex justify-center bg-gray-800 rounded-lg drop-shadow-lg">
-          <PostContainer />
+            <MyPostsContainer />
         </div>
         <div className="w-1/4 bg-gray-800 rounded-lg mt-4 mr-8">
           <ChatbotComponent />
@@ -27,4 +27,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default MyPosts;

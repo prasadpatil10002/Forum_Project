@@ -1,4 +1,4 @@
-const { Comment } = require('../models');
+const { Comment ,User} = require('../models');
 
 // Controller function to create a new comment
 async function createComment(req, res) {
@@ -6,8 +6,16 @@ async function createComment(req, res) {
     const { content, postid } = req.body;
     const userid = req.user.userid; // Assuming you have middleware to extract userId from token
     
-    const comment = await Comment.create({ content, postid, userid });
-    res.status(201).json({ success: true, message: 'Comment created successfully', comment });
+    const comment1 = await Comment.create({ content, postid, userid });
+    const user = await User.findByPk(userid);
+    const username = user.username;
+
+    const comment = {
+      ...comment1.toJSON(),
+      user:{username: username}
+      
+    };
+    res.status(201).json({ success: true, message: 'Comment created successfully', comment});
   } catch (error) {
     console.error('Error creating comment:', error);
     res.status(500).json({ success: false, message: 'Error creating comment' });
@@ -59,7 +67,8 @@ async function deleteComment(req, res) {
 async function getCommentsByPostId(req, res) {
     try {
       const { postid } = req.params;
-      const comments = await Comment.findAll({ where: { postid } });
+      console.log(postid);
+      const comments = await Comment.findAll({ where: { postid } ,include: {model: User, attributes: ['username']}});
       res.json(comments);
     } catch (error) {
       console.error('Error fetching comments by postId:', error);

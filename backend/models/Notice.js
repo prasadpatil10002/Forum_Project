@@ -1,12 +1,14 @@
 // models/Notice.js
+const User = require('./User');
 const { DataTypes } = require('sequelize');
 const sequelize = require('../database');
-const Department = require('./Department');
+
 
 const Notice = sequelize.define('notice', {
   noticeid: {
     type: DataTypes.INTEGER,
     primaryKey: true,
+    autoIncrement: true,
   },
   title: {
     type: DataTypes.STRING(255),
@@ -20,11 +22,17 @@ const Notice = sequelize.define('notice', {
     type: DataTypes.DATE,
     defaultValue: DataTypes.NOW,
     allowNull: false,
-  }
+  },
+  filename: {
+    type: DataTypes.STRING(255),
+    allowNull: true,
+  },
 },{
   timestamps: false,
 });
 
-Notice.belongsTo(Department, { foreignKey: 'departmentid', onDelete: 'CASCADE', onUpdate: 'CASCADE' });
+Notice.belongsTo(User, {foreignKey: 'userid'});
+
+
 
 module.exports = Notice;

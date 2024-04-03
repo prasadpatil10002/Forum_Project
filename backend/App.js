@@ -4,13 +4,15 @@ const userRoutes = require('./routes/userRoutes');
 const postRoutes = require('./routes/postRoutes');
 const noticeRoutes = require('./routes/noticeRoutes');
 const commentRoutes = require('./routes/commentRoutes');
+const path = require('path');
 const cors = require('cors');
 
 const app = express();
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: '*',
 }));
+app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 app.use(bodyParser.json());
 

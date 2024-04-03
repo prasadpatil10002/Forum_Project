@@ -1,4 +1,4 @@
-const {Post} = require('../models');
+const {Post,User} = require('../models');
 
 async function createPost(req,res){
     try{
@@ -55,7 +55,8 @@ async function deletePost(req,res){
 async function getuserPosts(req,res){
     try {
         const userid = req.query.userid;
-        const userPosts = await Post.findAll({ where: { userid } });
+        const userPosts = await Post.findAll({ where: { userid } ,
+        include: {model: User, attributes: ['username']}});
         res.json(userPosts);
       } catch (error) {
         console.error('Error fetching user posts:', error);
@@ -65,7 +66,9 @@ async function getuserPosts(req,res){
 
 async function getAllPosts(req,res){
     try {
-        const posts = await Post.findAll();
+        const posts = await Post.findAll({
+            include: {model: User, attributes: ['username']}
+        });
         res.json(posts);
       } catch (error) {
         console.error('Error fetching posts:', error);

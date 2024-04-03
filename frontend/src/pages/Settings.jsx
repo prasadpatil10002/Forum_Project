@@ -1,7 +1,7 @@
 import NavbarComponent from "../components/NavbarComponent";
 import SidebarComponent from "../components/SidebarComponent";
-import PostContainer from "../components/PostContainer";
 import ChatbotComponent from "../components/ChatbotComponent";
+import SettingsContiner from "../components/SettingsContainer";
 
 const Dashboard = () => {
   return (
@@ -16,7 +16,7 @@ const Dashboard = () => {
           </div>
         </div>
         <div className="mt-4 mr-24 postsContainer w-3/5 flex justify-center bg-gray-800 rounded-lg drop-shadow-lg">
-          <PostContainer />
+        <SettingsContiner/>
         </div>
         <div className="w-1/4 bg-gray-800 rounded-lg mt-4 mr-8">
           <ChatbotComponent />
